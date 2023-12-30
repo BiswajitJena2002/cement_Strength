@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cement Strength Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body style="background-color: rgb(165, 210, 242);">
+    <div class="container my-4">
+        <h1 class="text-center">Cement Strength Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="Cement (component 1)(kg in a m^3 mixture)">Cement </label>
+                <input type="number" class="form-control" name="Cement (component 1)(kg in a m^3 mixture)" step="any">
+            </div>
+            <div class="form-group">
+                <label for="Blast Furnace Slag (component 2)(kg in a m^3 mixture)">Blast Furnace Slag</label>
+                <input type="number" class="form-control" name="Blast Furnace Slag (component 2)(kg in a m^3 mixture)"
+                    step="any">
+            </div>
+            <div class="form-group">
+                <label for="Fly Ash (component 3)(kg in a m^3 mixture)">Fly Ash</label>
+                <input type="number" class="form-control" name="Fly Ash (component 3)(kg in a m^3 mixture)" step="any">
+            </div>
+            <div class="form-group">
+                <label for="Water (component 4)(kg in a m^3 mixture)">Water</label>
+                <input type="number" class="form-control" name="Water (component 4)(kg in a m^3 mixture)" step="any">
+            </div>
+            <div class="form-group">
+                <label for="Superplasticizer (component 5)(kg in a m^3 mixture)">Superplasticizer</label>
+                <input type="number" class="form-control" name="Superplasticizer (component 5)(kg in a m^3 mixture)"
+                    step="any">
+            </div>
+            <div class="form-group">
+                <label for="Coarse Aggregate (component 6)(kg in a m^3 mixture)">Coarse Aggregate</label>
+                <input type="number" class="form-control" name="Coarse Aggregate (component 6)(kg in a m^3 mixture)"
+                    step="any">
+            </div>
+            <div class="form-group">
+                <label for="Fine Aggregate (component 7)(kg in a m^3 mixture)">Fine Aggregate</label>
+                <input type="number" class="form-control" name="Fine Aggregate (component 7)(kg in a m^3 mixture)"
+                    step="any">
+            </div>
+            <div class="form-group">
+                <label for="Age (day)">Age</label>
+                <input type="number" class="form-control" name="Age (day)" step="any">
+            </div>
+            <button type="submit" class="btn btn-success btn-lg mt-2 btn-block" style="background-color: rgb(227, 8, 8);">Predict</button>
+        </form>
+        {% if prediction %}
+        <h1 class="text-center mt-4">Concrete compressive strength: <br>{{ prediction }}</h1>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
