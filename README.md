@@ -3,6 +3,7 @@
 # Cement Strength Prediction
 Live Demo
 Check out the live demo of the deployed application: https://cement-strength.onrender.com
+![Screenshot (446)](https://github.com/BiswajitJena2002/ucs_value_predictor_/assets/121337717/1f84d1e3-165a-4094-b8ce-f8adb7dc47e0)
 
 This project implements a machine learning model to predict the strength of cement based on various input features. The model is trained using the Random Forest algorithm.
 
