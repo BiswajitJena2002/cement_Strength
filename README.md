@@ -8,7 +8,7 @@ This project implements a machine learning model to predict the strength of ceme
 
 ## Files
 
-- `model.py`: Python script containing the code for training the Random Forest model. The trained model is saved along with the scaler used for data normalization.
+- `Cement_Strength_Prediction.ipynb`: Python script containing the code for training the Random Forest model. The trained model is saved along with the scaler used for data normalization.
 
 - `app.py`: Flask web application that allows users to input cement composition data and get predictions for the cement strength using the pre-trained model.
 
